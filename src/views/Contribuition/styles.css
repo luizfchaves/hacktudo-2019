@@ -1,4 +1,4 @@
-.imageHeader {
+.phaseimageHeader {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -6,38 +6,62 @@
   z-index: -1;
 }
 
-.title {
+.phasetitle {
+  height: 17vh;
   font-size: 2rem;
   font-weight: bolder;
   text-align: center;
   margin: 0;
 }
 
-.textContent {
-  margin-top: 75vh;
-  padding: 15px;
-  padding-right: 40px;
-  padding-left: 40px;
+.card-container {
+  margin-top: 5vh;
+  width: 60vw;
+  height: 90vh;
   max-width: 800px;
   background: #ffffff;
   border-radius: 5px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
   box-shadow: 1px 3px 10px 1px rgba(0, 0, 0, 0.5);
   text-align: left;
   animation: slide-up 0.5s;
 }
-.input {
+.comments-container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  overflow-y: scroll;
+}
+.new-comment-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: royalblue;
+}
+.comment-box {
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  height: 20%;
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 20px;
+}
+.phaseinput {
   border: 1px solid #101010 !important;
   margin-bottom: 1vh;
 }
-.callforaction {
+.cphaseallforaction {
   font-size: 1.5rem;
   font-weight: 600;
   text-align: right;
 }
 
-.down-arrow:hover {
+.phasedown-arrow:hover {
   animation: shake 0.8s infinite;
 }
 .coment {
@@ -56,17 +80,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin: 1px;
-  border: 1px solid #cecece;
   border-radius: 50%;
+  background-color: transparent;
 }
-.vote-button-like {
-  background-color: #42f545;
+.vote-button img {
+  transform: scale(0.7);
+  transition: ease-in-out 5ms;
 }
-.vote-button-dislike {
-  background-color: #eb1e1e;
+.vote-button-like:hover {
+  background-color: #34cc2e;
+}
+.vote-button-dislike:hover {
+  background-color: #cc261a;
+}
+.vote-button-liked {
+  background-color: #34cc2e;
+}
+.vote-button-disliked {
+  background-color: #cc261a;
 }
 
 @keyframes shake {
@@ -92,29 +126,17 @@
 }
 
 @media (max-width: 768px) {
-  .imageHeader {
-    width: auto;
-    height: 50vh;
-    position: fixed;
-    z-index: -1;
+  .phaseimageHeader {
+    display: none;
   }
   .down-arrow {
     display: none;
   }
-  .title {
-    margin: -10vh;
-    margin: 0;
-    font-size: 2rem;
-    font-weight: 600;
-    color: "white";
-  }
-  .textContent {
-    margin-top: 45vh;
-    padding: 15px;
-    padding-left: 50px;
-    padding-right: 50px;
-    max-width: 800px;
-    background: #fff;
+  .card-container {
+    margin-top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
   }
   .phases {
     transition: 2ms;

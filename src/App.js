@@ -1,18 +1,27 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory
+} from "react-router-dom";
 import "./App.css";
 
 import Home from "./views/Home/";
+import Contribuition from "./views/Contribuition/";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router hist={useHistory}>
         <Switch>
-          <Route path="/teste">
-            <div>coe2</div>
-          </Route>
-          <Route path="/" render={props => <Home />} />
+          <Route exact path="/" render={props => <Home />} />
+          <Route
+            exact
+            path="/contribuition"
+            render={props => <Contribuition />}
+          />
+          <Route path="*" render={props => <div>Page not found</div>} />
         </Switch>
       </Router>
     </div>
