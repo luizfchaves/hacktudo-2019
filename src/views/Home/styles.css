@@ -12,4 +12,10 @@
     font-weight: 600;
     color: "white";
   }
+  .textContent {
+    margin-top: 45vh;
+    padding: 15px;
+    max-width: 800px;
+    background: #ffffff;
+  }
 }

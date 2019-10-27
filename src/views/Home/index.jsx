@@ -35,8 +35,8 @@ export default class Home extends React.Component {
             src="https://ep01.epimg.net/brasil/imagenes/2019/10/24/album/1571951039_227089_1572011259_noticia_normal_recorte1.jpg"
             alt="Header"
           />
-          <Button>Teste</Button>
           <div
+            className="textContent"
             style={{
               marginTop: "45vh",
               padding: "15px",
